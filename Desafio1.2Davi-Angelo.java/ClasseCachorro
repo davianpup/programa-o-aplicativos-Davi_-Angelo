@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.mavenproject2;
+
+/**
+ *
+ * @author Aluno
+ */
+public class Cachorro {
+    public String nome_pet;
+    public String raca_pet;
+    public int idade_pet;
+    public String nome_dono;
+    public String contato_dono;
+    
+        public Cachorro(String nome_pet,String raca_pet,int idade_pet,String nome_dono,String contato_dono){
+            this.nome_pet = nome_pet;
+            this.raca_pet = raca_pet;
+            this.idade_pet = idade_pet;
+            this.nome_dono = nome_dono;
+            this.contato_dono = contato_dono;
+        }
+        
+        public void exibirDados(){
+            System.out.print("Nome do pet: "+nome_pet);
+            System.out.print("Raça: "+raca_pet);
+            System.out.print("Idade: "+idade_pet);
+            System.out.print("Dono: "+nome_dono);
+            System.out.print("Contato: "+contato_dono);
+        }
+}
