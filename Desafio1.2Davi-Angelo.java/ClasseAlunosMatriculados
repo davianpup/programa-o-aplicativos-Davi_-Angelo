@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.mavenproject2;
+
+/**
+ *
+ * @author Aluno
+ */
+public class AlunosMatriculados {
+    public String matricula;
+    public String nome;
+    public double prova1;
+    public double prova2;
+    public double trabalho;
+    
+        public AlunosMatriculados(String matricula,String nome,double prova1,double prova2,double trabalho){
+            this.matricula = matricula;
+            this.nome = nome;
+            this.prova1 = prova1;
+            this.prova2 = prova2;
+            this.trabalho = trabalho;
+        }
+        
+        public double Media(double prova1,double prova2, double trb,double media){
+            media = prova1 + prova2 + trb / 3;
+            return media;
+        }
+        
+        public double Provafinal(double media,double resultado){
+            if(media<4.2){
+               resultado = media - 4.2;
+               return resultado;
+            }
+        }
+}
