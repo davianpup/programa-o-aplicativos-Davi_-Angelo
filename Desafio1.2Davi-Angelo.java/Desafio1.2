@@ -1,0 +1,428 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.mavenproject2;
+import java.util.Scanner;
+/**
+ *
+ * @author Aluno
+ */
+public class Mavenproject2 {
+    public double CalcularDelta(int a,int b,int c){
+        double calculo = (Math.pow(b,2))-(4*a*c);
+        return calculo;
+    }
+    
+    public int Soma(int n1, int n2){
+        return n1+n2;
+    }
+    public int Subtracao(int n1, int n2){
+        return n1-n2;
+    }
+    public int Multiplicacao(int n1, int n2){
+        return n1*n2;
+    }
+    public int Divisao(int n1, int n2){
+        return n1/n2;
+    }
+    public void Mesdoano(int n1){
+        switch(n1){
+                case 1:
+                        System.out.print("Janeiro");
+                        break;
+                case 2:
+                        System.out.print("Fevereiro");
+                        break;
+                case 3:
+                        System.out.print("Março");
+                        break;
+                case 4:
+                        System.out.print("Abril");
+                        break;
+                case 5:
+                        System.out.print("Maio");
+                        break;
+                case 6:
+                        System.out.print("Junho");
+                        break;
+                case 7:
+                        System.out.print("Julho");
+                        break;
+                case 8:
+                        System.out.print("Agosto");
+                        break;
+                case 9:
+                        System.out.print("Setembro");
+                        break;
+                case 10:
+                        System.out.print("Outubro");
+                        break;
+                case 11:
+                        System.out.print("Novembro");
+                        break;
+                case 12:
+                        System.out.print("Dezembro");
+                        break;   
+        }
+        public static void MesanoV(int n){
+                String[] a = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","dezembro"];
+                resultado = a[n];
+                System.out.print(resultado);
+
+        }
+        public int Buscarnome(String[] nomes,String nomeBusca) {
+        for (int i = 0; i < nomes.length; i++) {
+            if (nomes[i].equalsIgnoreCase(nomeBusca)){
+                return i;
+            }
+        }
+        return -1;
+        }
+        }
+    
+
+    public static void main(String[] args) {
+//        com.mycompany.mavenproject2 CalcularDelta = new com.mycompany.mavenproject2();
+//        System.out.print("Dada a equação de 2° grau - 3x2 +4x -2=0. Qual o resultado para x1 e x2");
+//        double D  = CalcularDelta.next(-1,4,-2);
+//        double x1 = -4 + Math.sqrt(D);
+//        double x2 = -4-Math.sqrt(D)/2*(-3);
+
+        //Questão 2
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Calculadora \n1-Soma \n2-Subtração \n3-Multiplicação \n4-Divisão");
+//        int opc,n1,n2;
+//        opc = input.nextInt();
+//        double resultado;
+//        Mavenproject2 Calculadora = new Mavenproject2();
+//        switch(opc){
+//            case 1:
+//                System.out.print("Digite 1 número inteiro: ");
+//                n1 = input.nextInt();
+//                System.out.print("Digite 2 número inteiro: ");
+//                n2 = input.nextInt();
+//                resultado = Calculadora.Soma(n1, n2);
+//                System.out.printf("A soma de %d e %d é %2f",n1,n2,resultado);
+
+        //Questão 3-A
+        // int n;
+        // Mavenproject2 funcao= new Mavenproject2();
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Digite um n° int referente a um mes do ano: ");
+        // n = input.nextInt();
+        // resultado = funcao.Mesdoano(n);
+        // System.out.print(n);
+
+        //Questão 3-B
+        // int n;
+        // Mavenproject2 funcao= new Mavenproject2();
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Digite um número referente ao mês do ano(sendo 0 o primeiro e 11 o último): ");
+        // n = input.nextInt();
+        // resultado = funcao.MesanoV(n);
+        // System.out.print(resultado);
+
+        //Questão 4
+        // int n,acimaMedia = 0;
+        // double[] salarios = new double[n];
+        // double soma = 0,media;
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Quantos funcionários a empresa possui? ");
+        // n = input.nextInt();
+
+        // for (int i = 0; i < n; i++) {
+        //     System.out.printf("Digite o salário do funcionário %d"i);
+        //     salarios[i] = input.nextDouble();
+        //     soma += salarios[i];
+        // }
+
+        // media = soma / n;
+
+        // int acimaMedia = 0;
+        // for (int i = 0; i < n; i++) {
+        //     if (salarios[i] > media) {
+        //         acimaMedia++;
+        //     }
+        // }
+
+        // System.out.println("Média salarial: " + media);
+        // System.out.println("Funcionários com salário acima da média: " + acimaMedia);
+
+        //Questão 5
+        // Scanner input = new Scanner(System.in);
+        // int posicao;
+        // double n,menor = 200;
+        // double[] a= new double[10];
+        // for(int i;i<a.length;i++){
+        //         System.out.printf("Digite o peso da pessoa %d"i);
+        //         n = input,nextDouble();
+        //         a[i] = n;
+        // }
+        // for(int j;j<a.length;j++){
+        //         if(a[i] < menor){
+        //                 menor = a[i];
+        //                 posicao = i;
+        //         }
+        // }
+        
+        // System.out.println("menor peso é: "+menor);
+        // System.out.println("está na posição: "+posicao);
+
+        //Questão 6
+        // int n,a=0,b=1,c;
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Digite o valor de N: ");
+        // n = input.nextInt();
+
+        // System.out.print("Sequência de Fibonacci: ");
+
+        // if (n <= 0) {
+        //     System.out.println("Número inválido");
+        // } else if (n == 1) {
+        //     System.out.print(a);
+        // } else {
+        //     System.out.print(a+" "+b);
+        //     for (int i = 2; i < n; i++) {
+        //         c = a + b;
+        //         System.out.print(" " + c);
+        //         a = b;
+        //         b = c;
+        //     }
+        // }
+
+        //Questão 7
+//        Scanner input = new Scanner(System.in);
+//        String[] nomes = new String[10];
+//        Mavenproject2 Buscarnome= new Mavenproject2();
+//        for (int i = 0; i < 10; i++) {
+//            System.out.printf("Digite o nome %d",i);
+//            nomes[i] = input.nextLine();
+//        }
+//
+//        System.out.print("Digite um nome: ");
+//        String nomeBusca = input.nextLine();
+//
+//        int posicao = Buscarnome(nomes, nomeBusca);
+//        if (posicao == -1) {
+//            System.out.println("Nome não encontrado no vetor.");
+//        } else {
+//            System.out.println("O nome foi encontrado na posição: " + posicao);
+//        }
+
+        //Questão 8
+//        Scanner input = new Scanner(System.in);
+//        String nome,raca,dono,contato;
+//        int idade, op;
+//        System.out.println("===Cadastro Pet Shp Amigo Fiel===");
+//        System.out.println("Digite o nome do pet: ");
+//        nome = input.nextLine();
+//        System.out.print("Digite a raça do pet: ");
+//        raca = input.nextLine();
+//        System.out.print("Digite a idade do pet: ");
+//        idade = input.nextInt();
+//        System.out.print("Digite o nome do dono: ");
+//        dono = input.nextLine();
+//        System.out.print("Digite o contato do dono: ");
+//        contato = input.nextLine();
+//        
+//        Cachorro novo_pet = new Cachorro(nome,raca,idade,dono,contato);
+//        
+//        System.out.println("===Menu de Serviços==");
+//        System.out.println("1. Banho");
+//        System.out.println("2. Tosa");
+//        System.out.println("3. Banho e Tosa");
+//        System.out.println("4. Consulta veterinária");
+//        System.out.println("Escolha o procedimento desejado: ");
+//        op = input.nextInt();
+//        
+//        System.out.println("===================================");
+//        System.out.println("FICHA DE ATENDIMENTO - AMIGO FIEL");
+//        System.out.println("===================================");
+//        novo_pet.exibirDados();
+//        System.out.println("------------------------------------");
+//        switch(op){
+//            case 1:
+//                System.out.println("Procedimento.....: Banho");
+//                break;
+//            case 2:
+//                System.out.println("Procedimento.....: Tosa");
+//                break;
+//            case 3:
+//                System.out.println("Procedimento.....: Banho e Tosa");
+//                break;
+//            case 4:
+//                System.out.println("Procedimento.....: Consulta veterinária");
+//                break;
+//            default:
+//                System.out.println("Opção inválida");
+//        }
+//        System.out.println("=============================================");
+//
+        //Questão 9
+//        Scanner input = new Scanner(System.in);
+//        double prova1, prova2, trb;
+//        System.out.print("Digite a nota da 1° prova do aluno: ");
+//        prova1 = input.nextDouble();
+//        System.out.print("Digite a nota da 2° prova do aluno: ");
+//        prova2 = input.nextDouble();
+//        System.out.print("Digite a nota do trabalho do aluno: ");
+//        trb = input.nextDouble();
+//        
+//        AlunosMatriculados Media = new Media(prova1,prova2,trb);
+//        System.out.print("Media do aluno: "+Media);
+//        AlunosMatriculados Provafinal = new Provafinal(Media);
+//        System.out.print("Pontos para alcançar a média na prova(caso negaivo, nenhuma nota pendente): "+Provafinal);
+
+        //Questão 10
+        //class Aluno {
+       //   String matricula;
+         // String nome;
+       //   double notaProva1;
+       //   double notaProva2;
+        //  double notaTrabalho;
+
+        //  public Aluno(String matricula, String nome, double notaProva1, double notaProva2, double notaTrabalho) {
+         //    this.matricula = matricula;
+         //     this.nome = nome;
+        //      this.notaProva1 = notaProva1;
+        //      this.notaProva2 = notaProva2;
+        //      this.notaTrabalho = notaTrabalho;
+      //    }
+
+        //  public double media() {
+         //     double mediaFinal = (notaProva1 * 2.5 + notaProva2 * 2.5 + notaTrabalho * 2) / 7;
+         //     return mediaFinal;
+        //  }
+
+         // public double finalNecessario() {
+          //    double media = media();
+          //    if (media >= 7) {
+            //      return 0; 
+          //    } else {
+            //      double necessario = 10 - media;
+            //      return (necessario > 10) ? 10 : necessario;
+           //   }
+        //  }
+
+        //  public void exibirInfo() {
+          //    System.out.println("\n=== Dados do Aluno ===");
+          //    System.out.println("Matrícula: " + matricula);
+           //   System.out.println("Nome: " + nome);
+           //   System.out.println("Média: " + media());
+           //   double necessario = finalNecessario();
+           //   if (necessario == 0) {
+           //       System.out.println("Aluno aprovado! Não precisa de prova final.");
+           //   } else {
+             //     System.out.println("Aluno precisa de " + necessario + " pontos na prova final.");
+            //  }
+      //====================  CLASSE GABARITO ====================
+       //  class Gabarito {
+        //  public char respostaQuestao(int numeroQuestao) {
+        //      char respostas[] = {'A', 'C', 'D', 'A', 'A', 'B', 'C', 'D', 'B', 'E', 'A', 'B', 'A', 'C', 'C'};
+        //      return respostas[numeroQuestao - 1];
+       //   }
+      //}
+
+      // ==================== CLASSE PROVA ====================
+      //class Prova {
+       //   Gabarito gabarito;
+        //  char respostaAluno[] = new char[15];
+       //   int i = 0;
+
+       //   public Prova(Gabarito g) {
+       //       this.gabarito = g;
+       //   }
+
+       //   public void respostaAluno(char resposta) {
+          //    if (i < 15) {
+           //       respostaAluno[i] = resposta;
+           //       i++;
+          //    }
+       //  }
+
+        //  public int acertos() {
+         //     int cont = 0;
+         //     for (int i = 0; i < 15; i++) {
+         //         if (respostaAluno[i] == gabarito.respostaQuestao(i + 1)) {
+              //        cont++;
+             //     }
+            //  }
+         //     return cont;
+         // }
+
+        //  public double nota() {
+         //     double total = 0;
+          //    for (int i = 0; i < 15; i++) {
+           //       if (respostaAluno[i] == gabarito.respostaQuestao(i + 1)) {
+           //           if (i < 10) {
+           //               total += 0.5;
+               //       } else {
+                //          total += 1;
+               //       }
+             //     }
+           //   }
+           //   return total;
+        //  }
+
+        //  public double maior(Prova outra) {
+         //     int acertos1 = this.acertos();
+         //     int acertos2 = outra.acertos();
+         //     double nota1 = this.nota();
+         //     double nota2 = outra.nota();
+
+        //      if (acertos2 > acertos1) return outra.nota();
+        //      else if (acertos2 < acertos1) return this.nota();
+        //      else return Math.max(nota1, nota2);
+        //  }
+      //}
+          //    Aluno yuri = new Aluno("ADS123", "YURI", 7.0, 8.0, 4.0);
+           //   yuri.exibirInfo();
+
+         //     entrada.close();
+        //  }
+      //}
+      /// ==================== TESTE DE PROVAS ====================
+          //    Gabarito g = new Gabarito();
+         //     Prova p1 = new Prova(g);
+          //    Prova p2 = new Prova(g);
+
+          //    System.out.println("\n===== Aluno 1 =====\n");
+          //    for (int i = 0; i < 15; i++) {
+
+
+
+
+
+
+
+
+              //    System.out.print("Digite uma resposta para questão " + (i + 1) + ": ");
+               //   char rp = entrada.next().charAt(0);
+              //    p1.respostaAluno(rp);
+             // }
+
+          //    System.out.println("\n===== Aluno 2 =====\n");
+          //    for (int i = 0; i < 15; i++) {
+          //        System.out.print("Digite uma resposta para questão " + (i + 1) + ": ");
+           //       char rp = entrada.next().charAt(0);
+           //       p2.respostaAluno(rp);
+          //    }
+
+         //     System.out.println("\nNota do aluno 1: " + p1.nota());
+         //     System.out.println("\nNota do aluno 1: " + p1.acertos());
+         //     System.out.println("Aluno 2 acertou: " + p2.acertos());
+         //     System.out.println("Nota do aluno 2: " + p2.nota());
+         //     System.out.println("\nMaior nota entre os dois: " + p1.maior(p2));
+
+
+      //    }
+      //}
+
+        
+        
+        
+        }
+
+    }
+}
