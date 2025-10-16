@@ -1,0 +1,144 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.desafio1.davi.angelo.java;
+import java.util.Scanner;
+/**
+ *
+ * @author Oem
+ */
+public class ServicoCambio {
+    public double vDolar;
+    public double cDolar;
+    public double saldo;
+    public double Sdolar;
+    public String[] extrato = new String[100];
+    public int qtdMov;
+    
+        public ServicoCambio(double vDolar,double cDolar,double saldo,double Sdolar,String extrato[],int qtdMov){
+            this.vDolar = vDolar;
+            this.cDolar = cDolar;
+            this.saldo = saldo;
+            this.Sdolar = Sdolar;
+            this.extrato = new String[100];
+            this.qtdMov = qtdMov;
+        }
+    
+        public void Servico(double vDolar,double cDolar,double saldo,double Sdolar,String extrato[],int qtdMov,String rsp2,String rsp,int opc){  
+            Scanner input = new Scanner(System.in);
+            cDolar = vDolar * 5.32;
+
+            if (cDolar > saldo) {
+                System.out.println("Saldo insuficiente!");
+            } else {
+                System.out.print("Deseja continuar a operação (s/n)? ");
+                rsp2 = input.nextLine();
+
+                if ("S".equalsIgnoreCase(rsp2)) {
+                    saldo -= cDolar;
+                    Sdolar += vDolar;
+                    System.out.println("Compra realizada com sucesso!");
+                    System.out.println("Novo saldo em reais: R$" + saldo + "0");
+                    System.out.println("Novo saldo em dólar: US$" + Sdolar + "0");
+
+                    extrato[qtdMov] = "COMPRA DÓLAR -R$" + cDolar + "0" + " | +US$" + vDolar + "0";
+                    qtdMov++;
+                } else {
+                    System.out.print("Cancelando...");
+                }
+            }
+
+            do {
+                System.out.print("Digite (R) Simular novamente, (V) para voltar ao Menu ou (E) para encerrar o programa: ");
+                rsp = input.nextLine();
+
+                if ("V".equalsIgnoreCase(rsp)) {
+                    break;
+                } else if ("E".equalsIgnoreCase(rsp)) {
+                    opc = 0;
+                    break;
+                } else if ("R".equalsIgnoreCase(rsp)) {
+                } else {
+                    System.out.println("Valor inválido");
+                }
+            } while (true);
+         
+        }
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.desafio1.davi.angelo.java;
+import java.util.Scanner;
+import java.lang.Math;
+/**
+ *
+ * @author Oem
+ */
+public class SimuladorEmprestimo {
+    public double vEmp;
+    public double sBruto;
+    public int qtdP;
+    
+        public SimuladorEmprestimo(double vEmp,double sBruto,int qtdP){
+            this.vEmp = vEmp;
+            this.sBruto = sBruto;
+            this.qtdP = qtdP;
+        }
+        
+        public void Emprestimo(double vEmp,double sBruto,int qtdP,double vJ,double vP,double numAl,double protocolo,String rsp,int opc){
+                    Scanner input = new Scanner(System.in);
+                    vJ = ((2.0/100)*vEmp)+vEmp;
+                    vP = vJ/qtdP;
+                    if(vP <= (30.0/100)*sBruto){
+                        numAl = Math.random();
+                        protocolo = (double)(numAl * 1000000);
+                        System.out.println("Empréstimo disponível, entre em contato com a central e informe o número de protocolo EM"+protocolo);
+                        System.out.println("Valor da parcela: R$"+vP+"0");
+                        System.out.println("Valor solicitado: R$"+vEmp+"0");
+                        System.out.println("Valor com Juros: R$"+vJ+"0");
+                    }else{
+                        System.out.println("Valor indisponível. O valor da parcela ultrapassa o limite permitido!");
+                    }
+                    do{
+                        System.out.print("Digite V para voltar ao Menu ou (E) para encerrar o programa: ");
+                        rsp = input.nextLine();
+                        if("V".equalsIgnoreCase(rsp)){
+                            break;
+                        }else if("E".equalsIgnoreCase(rsp)){
+                            opc=0;
+                            break;
+                        }else{
+                            System.out.println("Valor inválido");
+                        }
+                    }while(true);
+        }
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.desafio1.davi.angelo.java;
+
+/**
+ *
+ * @author Oem
+ */
+public class SaldoBancario {
+    public double saldo;
+    public double Sdolar;
+    
+        public SaldoBancario(double saldo,double Sdolar){
+            this.saldo = saldo;
+            this.Sdolar = Sdolar;
+        }
+        
+        public void Saldo(double saldo,double Sdolar){
+            System.out.println("Saldo em reais: R$" + saldo+"0");
+            System.out.println("Saldo em dólar: US$" + Sdolar+"0");
+        }
+}
