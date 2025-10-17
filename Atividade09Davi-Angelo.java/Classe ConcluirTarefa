@@ -1,0 +1,27 @@
+package com.mycompany.atividade09davi.angelo.java;
+import java.util.Scanner;
+
+public class ConcluirTarefa {
+    public void Concluir() {
+        Scanner input = new Scanner(System.in);
+        if (AdicionarTarefa.ctd == 0) {
+            System.out.println("Nenhuma tarefa cadastrada!");
+            return;
+        }
+        System.out.print("Digite o ID da tarefa que deseja concluir: ");
+        int idEscolhido = input.nextInt();
+        boolean encontrada = false;
+
+        for (int i = 0; i < AdicionarTarefa.ctd; i++) {
+            if (AdicionarTarefa.ids[i] == idEscolhido) {
+                AdicionarTarefa.status[i] = "Concluída";
+                System.out.println("Tarefa concluída!");
+                encontrada = true;
+                break;
+            }
+        }
+        if (!encontrada) {
+            System.out.println("id não encontrado!");
+        }
+    }
+}
