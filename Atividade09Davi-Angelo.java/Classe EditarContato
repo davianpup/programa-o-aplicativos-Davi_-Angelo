@@ -1,0 +1,48 @@
+package com.mycompany.atividade09.davi.angelo.java;
+import java.util.Scanner;
+
+public class EditarContato {
+    public static void editar(String[] nomes, String[] telefones, String[] emails, int total) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\n--- EDITAR CONTATO ---");
+        if (total == 0) {
+            System.out.println("Nenhum contato para editar.\n");
+            return;
+        }
+
+        for (int i = 0; i < total; i++) {
+            System.out.println((i + 1) + " - " + nomes[i]);
+        }
+
+        System.out.print("Escolha o número do contato: ");
+        int pos = input.nextInt();
+        input.nextLine();
+
+        if (pos < 1 || pos > total) {
+            System.out.println("Contato inválido.\n");
+        } else {
+            int indice = pos - 1;
+
+            System.out.print("Novo nome (deixe vazio para não alterar): ");
+            String novoNome = input.nextLine();
+            if (!novoNome.equals("")) {
+                nomes[indice] = novoNome;
+            }
+
+            System.out.print("Novo telefone (deixe vazio para não alterar): ");
+            String novoTel = input.nextLine();
+            if (!novoTel.equals("")) {
+                telefones[indice] = novoTel;
+            }
+
+            System.out.print("Novo e-mail (deixe vazio para não alterar): ");
+            String novoEmail = input.nextLine();
+            if (!novoEmail.equals("")) {
+                emails[indice] = novoEmail;
+            }
+
+            System.out.println("Contato atualizado com sucesso!\n");
+        }
+    }
+}
