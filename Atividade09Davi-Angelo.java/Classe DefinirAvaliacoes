@@ -1,0 +1,35 @@
+package com.mycompany.atividade09.davi.angelo.java;
+import java.util.Scanner;
+
+public class DefinirAvaliacoes {
+    public String[] avaliacoes = new String[100];
+    public int[] notas = new int[100];
+    public int qtd_avc;
+    public int soma;
+    public void Definicao(){
+        int soma=0;
+        do{
+        String[] avaliacoes = new String[100];
+        int[] notas = new int[100];
+        int qtd_avc,pos;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Quantas avaliações? ");
+        qtd_avc = input.nextInt();
+        input.nextLine();
+        
+        for(int i=1;i<=qtd_avc;i++){
+            pos = i-1;
+            System.out.printf("Nome da avaliação %d: ",i);
+            avaliacoes[pos] = input.nextLine();
+            System.out.print("Pontuação máx(Ex: 20): ");
+            notas[pos] = input.nextInt();
+            input.nextLine();
+            soma += notas[pos];
+            if(soma>100){
+                System.out.println("Limite de 100ps ultrapassado");
+            }
+        }
+        System.out.printf("Total definido: %d pontos\n",soma);
+        }while(!(soma<=100));
+    }
+}
