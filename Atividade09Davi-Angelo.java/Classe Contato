@@ -1,0 +1,15 @@
+package com.mycompany.atividade09.davi.angelo.java;
+import java.util.Scanner;
+
+public class Contato {
+    public static void cadastrarContato(String[] nomes, String[] telefones, String[] emails, int ind) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Nome: ");
+        nomes[ind] = input.nextLine();
+        System.out.print("Telefone: ");
+        telefones[ind] = input.nextLine();
+        System.out.print("E-mail: ");
+        emails[ind] = input.nextLine();
+        System.out.println("Contato adicionado com sucesso!\n");
+    }
+}
