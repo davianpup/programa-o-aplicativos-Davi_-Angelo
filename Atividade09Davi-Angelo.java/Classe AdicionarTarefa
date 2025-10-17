@@ -1,0 +1,22 @@
+package com.mycompany.atividade09davi.angelo.java;
+import java.util.Scanner;
+
+public class AdicionarTarefa {
+    public static String[] tarefas = new String[100];
+    public static String[] status = new String[100];
+    public static int[] ids = new int[100];
+    public static int ctd = 0;
+    public static int id = 1;
+
+    public void Adicionar() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("[Adicionar]");
+        System.out.print("Descrição: ");
+        tarefas[ctd] = input.nextLine();
+        ids[ctd] = id;
+        status[ctd] = "Pendente";
+        System.out.println("Tarefa adicionada!");
+        ctd++;
+        id++;
+    }
+}
