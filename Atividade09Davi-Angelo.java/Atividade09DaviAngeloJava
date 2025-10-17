@@ -1,0 +1,141 @@
+package com.mycompany.atividade09davi.angelo.java;
+
+import java.util.Scanner;
+
+public class Atividade09DaviAngeloJava {
+    public static void main(String[] args) {
+//        int opc, ctd = 0;;
+//        String[] nomes = new String[100];
+//        String[] telefones = new String[100];
+//        String[] emails = new String[100];
+//        Scanner input = new Scanner(System.in);
+//
+//        do {
+//            System.out.println("=== Agenda Eletrônica ===");
+//            System.out.println("1 - Cadastrar novo contato");
+//            System.out.println("2 - Consultar Agenda");
+//            System.out.println("3 - Editar Contato");
+//            System.out.println("4 - Excluir Contato");
+//            System.out.println("0 - Sair");
+//            opc = input.nextInt();
+//            input.nextLine(); 
+//
+//            switch (opc) {
+//                case 1:
+//                    Contato.cadastrarContato(nomes, telefones, emails, ctd);
+//                    ctd++;
+//                    break;
+//
+//                case 2:
+//                    ConsultarAgenda.consultar(nomes, telefones, emails, ctd);
+//                    break;
+//
+//                case 3:
+//                    EditarContato.editar(nomes, telefones, emails, ctd);
+//                    break;
+//
+//                case 4:
+//                    ctd = ExcluirContato.excluir(nomes, telefones, emails, ctd);
+//                    break;
+//            }
+//        } while (opc != 0);
+//
+//        System.out.println("Encerrando...");
+
+        //Questão 2
+//        Scanner input = new Scanner(System.in);
+//        int opc;
+//        do{
+//            System.out.println("===Biblioteca===");
+//            System.out.println("1-Consultar acervo");
+//            System.out.println("2-Pegar livro emprestado");
+//            System.out.println("3-Sair");
+//            System.out.println("=========================");
+//            opc = input.nextInt();
+//            
+//            switch(opc){
+//                case 1:
+//                    ConsultarAcervo Consultar = new ConsultarAcervo();
+//                    Consultar.Acervo();
+//                
+//                case 2:
+//                    EmprestimoLivro Funcao = new EmprestimoLivro();
+//                    Funcao.Emprestimo();
+//                    
+//                case 3:
+//                    System.out.println("Encerrando o programa...");
+//                    
+//            }
+//        }while(opc!=0);
+
+        //Questão 3
+//        Scanner input = new Scanner(System.in);
+//        int opc;
+//        do{
+//            System.out.println("=== TO-DO ===");
+//            System.out.println("1-Adicionar Tarefa");
+//            System.out.println("2-Listar Tarefas");
+//            System.out.println("3-Concluir Tarefas");
+//            System.out.println("4-Sair");
+//            opc = input.nextInt();
+//        
+//                switch(opc){
+//                    case 1:
+//                        AdicionarTarefa Inicializar = new AdicionarTarefa();
+//                        Inicializar.Adicionar();
+//                        break;
+//                        
+//                    case 2:
+//                        ListarTarefas listar = new ListarTarefas();
+//                        listar.Listar();
+//                        break;
+//                        
+//                    case 3:
+//                        ConcluirTarefa concluir = new ConcluirTarefa();
+//                        concluir.Concluir();
+//                        break;
+//                    
+//                    case 4:
+//                        System.out.println("Encerrando o programa...");
+//                }
+//        }while(opc==0);
+
+        //Questão 4
+        //Questão 4
+        Scanner input = new Scanner(System.in);
+        int opc;
+        do{
+        System.out.println("=== SISTEMAS DE NOTAS ===");
+        System.out.println("1-Definir avaliações");
+        System.out.println("2-Lançar notas dos alunos");
+        System.out.println("3-Gerar boletim");
+        System.out.println("4-Sair");
+        opc = input.nextInt();
+        
+            switch(opc){
+                case 1:
+                    DefinirAvaliacoes Definir = new DefinirAvaliacoes();
+                    Definir.Definicao();
+                    
+                case 2:
+                    LancarNotas Lancar = new LancarNotas();
+                    Lancar.mostrarAvaliacoes();
+                    
+                case 3:
+                    GerarBoletim Boletim = new GerarBoletim();
+                    Boletim.gerar(Lancar, Definir);
+                    break;
+                    
+                case 4:
+                        System.out.println("Encerrando o programa...");
+                        break;
+                        
+                default:
+                System.out.println("Opção inválida!");
+    
+            }
+        }while(opc!=0);
+                
+        
+    }
+}
