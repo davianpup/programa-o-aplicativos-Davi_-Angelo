@@ -1,0 +1,16 @@
+package com.mycompany.atividade09.davi.angelo.java;
+
+public class ConsultarAgenda {
+    public static void consultar(String[] nomes, String[] telefones, String[] emails, int ctd) {
+        if (ctd == 0) {
+            System.out.println("Nenhum contato cadastrado.\n");
+            return;
+        }
+        for (int i = 0; i < ctd; i++) {
+            System.out.println("Nome: " + nomes[i]);
+            System.out.println("Telefone: " + telefones[i]);
+            System.out.println("Email: " + emails[i]);
+            System.out.println("-------------------");
+        }
+    }
+}
