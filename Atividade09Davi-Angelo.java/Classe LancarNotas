@@ -1,0 +1,48 @@
+package com.mycompany.atividade09davi.angelo.java;
+
+import java.util.Scanner;
+
+public class LancarNotas {
+    // Vetores para armazenar as notas lançadas
+    double[] notasAlunos;
+    String[] nomesAlunos;
+    int qtdAlunos;
+    
+
+    public void lancar(DefinirAvaliacoes def) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Quantos alunos deseja cadastrar? ");
+        qtdAlunos = input.nextInt();
+        input.nextLine();
+        
+        nomesAlunos = new String[qtdAlunos];
+        notasAlunos = new double[qtdAlunos * def.qtd_avc];
+        
+        for (int i = 0; i < qtdAlunos; i++) {
+            System.out.print("\nNome do aluno " + (i + 1) + ": ");
+            nomesAlunos[i] = input.nextLine();
+            
+            for (int j = 0; j < def.qtd_avc; j++) {
+                System.out.print("Nota de " + def.avaliacoes[j] + ": ");
+                double nota = input.nextDouble();
+                while (nota < 0 || nota > def.notas[j]) {
+                    System.out.println("Nota inválida! Deve ser entre 0 e " + def.notas[j]);
+                    System.out.print("Digite novamente: ");
+                    nota = input.nextDouble();
+                }
+                notasAlunos[i * def.qtd_avc + j] = nota;
+            }
+            input.nextLine();
+        }
+
+        System.out.println("\nNotas lançadas com sucesso!");
+    }
+
+    public void mostrarAvaliacoes(DefinirAvaliacoes def) {
+        System.out.println("\n=== Avaliações definidas ===");
+        for (int i = 0; i < def.qtd_avc; i++) {
+            System.out.println((i + 1) + " - " + def.avaliacoes[i] + " (" + def.notas[i] + " pontos)");
+        }
+    }
+}
