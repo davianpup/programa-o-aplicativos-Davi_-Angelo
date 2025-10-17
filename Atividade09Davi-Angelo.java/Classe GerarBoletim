@@ -1,0 +1,42 @@
+package com.mycompany.atividade09davi.angelo.java;
+
+public class GerarBoletim {
+
+    public void gerar(LancarNotas lancar, DefinirAvaliacoes def) {
+
+        if (lancar.nomesAlunos == null || lancar.notasAlunos == null) {
+            System.out.println("Nenhum aluno encontrado! Lance as notas primeiro.");
+            return;
+        }
+
+        System.out.println("===== BOLETIM FINAL =====");
+
+        for (int i = 0; i < lancar.qtdAlunos; i++) {
+            double soma = 0;
+
+            System.out.println("\nAluno: " + lancar.nomesAlunos[i]);
+
+            for (int j = 0; j < def.qtd_avc; j++) {
+                double nota = lancar.notasAlunos[i * def.qtd_avc + j];
+                soma += nota;
+                System.out.println(def.avaliacoes[j] + ": " + nota);
+            }
+
+            double media = soma;
+            String situacao = "";
+
+            if (media <= 45) {
+                situacao = "Reprovado";
+            } else if (media < 60) {
+                situacao = "Recuperação";
+            } else {
+                situacao = "Aprovado";
+            }
+
+            System.out.println("Total de pontos: " + media);
+            System.out.println("Situação: " + situacao);
+        }
+
+        System.out.println("==========================");
+    }
+}
