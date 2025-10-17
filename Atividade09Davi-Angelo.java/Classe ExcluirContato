@@ -1,0 +1,37 @@
+package com.mycompany.atividade09.davi.angelo.java;
+import java.util.Scanner;
+
+public class ExcluirContato {
+    public static int excluir(String[] nomes, String[] telefones, String[] emails, int total) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\n--- EXCLUIR CONTATO ---");
+        if (total == 0) {
+            System.out.println("Nenhum contato para excluir.\n");
+            return total;
+        }
+
+        for (int i = 0; i < total; i++) {
+            System.out.println((i + 1) + " - " + nomes[i]);
+        }
+
+        System.out.print("Escolha o número do contato: ");
+        int pos = input.nextInt();
+        input.nextLine();
+
+        if (pos < 1 || pos > total) {
+            System.out.println("Contato inválido.\n");
+        } else {
+            int indice = pos - 1;
+            for (int i = indice; i < total - 1; i++) {
+                nomes[i] = nomes[i + 1];
+                telefones[i] = telefones[i + 1];
+                emails[i] = emails[i + 1];
+            }
+            total--;
+            System.out.println("Contato excluído com sucesso!\n");
+        }
+
+        return total;
+    }
+}
