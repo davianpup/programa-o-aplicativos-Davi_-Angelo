@@ -1,0 +1,12 @@
+package com.mycompany.atividade09davi.angelo.java;
+
+public class ListarTarefas {
+    public void Listar() {
+        System.out.println("=== Lista de Tarefas ===");
+        for (int i = 0; i < AdicionarTarefa.ctd; i++) {
+            System.out.println("ID: " + AdicionarTarefa.ids[i] +
+                               " | Descrição: " + AdicionarTarefa.tarefas[i] +
+                               " | Status: " + AdicionarTarefa.status[i]);
+        }
+    }
+}
