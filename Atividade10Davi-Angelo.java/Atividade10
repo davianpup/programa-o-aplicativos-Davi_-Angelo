@@ -1,0 +1,77 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.atividade10;
+import java.util.Scanner;
+import java.util.ArrayList;
+/**
+ *
+ * @author Aluno
+ */
+public class Atividade10 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+         ConexaoDao dao = new ConexaoDao();
+        Aluno aluno;
+        int opcao;
+
+        do {
+            System.out.println("\n=== Sistema de Gerenciamento de Alunos ===");
+            System.out.println("1 - Cadastrar aluno");
+            System.out.println("2 - Listar alunos");
+            System.out.println("3 - Atualizar aluno");
+            System.out.println("4 - Deletar aluno");
+            System.out.println("5 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = input.nextInt();
+            input.nextLine();
+
+            switch (opcao) {
+                case 1:
+                    aluno = new Aluno();
+                    System.out.print("Digite o ID do aluno: ");
+                    aluno.setId(input.nextInt());
+                    input.nextLine();
+                    System.out.print("Digite o nome do aluno: ");
+                    aluno.setNome(input.nextLine());
+                    dao.cadastrarAluno(aluno);
+                    break;
+
+                case 2:
+                    ArrayList<Aluno> lista = dao.listarAlunos();
+                    System.out.println("\n--- Lista de Alunos ---");
+                    for (Aluno a : lista) {
+                        System.out.println("ID: " + a.getId() + " | Nome: " + a.getNome());
+                    }
+                    break;
+
+                case 3:
+                    aluno = new Aluno();
+                    System.out.print("Digite o ID do aluno que deseja atualizar: ");
+                    aluno.setId(input.nextInt());
+                    input.nextLine();
+                    System.out.print("Digite o novo nome: ");
+                    aluno.setNome(input.nextLine());
+                    dao.atualizarAluno(aluno);
+                    break;
+
+                case 4:
+                    System.out.print("Digite o ID do aluno que deseja excluir: ");
+                    int id = input.nextInt();
+                    dao.deletarAluno(id);
+                    break;
+
+                case 5:
+                    System.out.println("Saindo do sistema...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida, tente novamente.");
+            }
+        } while (opcao != 5);
+
+        input.close();
+    }
+}
